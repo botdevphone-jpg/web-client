@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" onload="alert('XSS via SVG from GitHub!')">
-  <script>
-    alert('XSS from script tag');
-  </script>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <foreignObject>
+    <script>alert('XSS via foreignObject')</script>
+  </foreignObject>
 </svg>
