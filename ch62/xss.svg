@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-  <foreignObject>
-    <script>alert('XSS via foreignObject')</script>
-  </foreignObject>
+  <a href="https://google.com/redirect">
+    <text>Нажми на меня</text>
+  </a>
 </svg>
